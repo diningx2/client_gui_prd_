@@ -183,7 +183,6 @@ def time_series(df1):
     start_ = df1['date'].min()
     end_ = df1['date'].max()
 
-    date_range = np.sort(list(set([dt.strptime(str(i.year)+'-'+str(i.month)+'-'+'01', '%Y-%m-%d') for i in list(daterange(start_, end_))])))
     if len(date_range) == 0:
         date_range = [dt.strptime(str(start_.year)+'-'+str(start_.month)+'-'+'01', '%Y-%m-%d')]
     st.write(date_range)
