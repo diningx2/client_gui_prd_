@@ -186,6 +186,7 @@ def time_series(df1):
     date_range = np.sort(list(set([dt.strptime(str(i.year)+'-'+str(i.month)+'-'+'01', '%Y-%m-%d') for i in list(daterange(start_, end_))])))
     if len(date_range) == 0:
         date_range = [dt.strptime(str(start_.year)+'-'+str(start_.month)+'-'+'01', '%Y-%m-%d')]
+    st.write(date_range)
     
     date_option = [str(i)[:7].replace('-','/') for i in date_range]
     date_option = [i+'/01' for i in date_option]
