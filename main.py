@@ -30,6 +30,7 @@ if not firebase_admin._apps:
     "auth_provider_x509_cert_url": os.environ.get('auth_provider_x509_cert_url'),
     "client_x509_cert_url": os.environ.get('client_x509_cert_url')
     }
+    st.write(keys)
     if os.environ.get('isDeployment') is None:
         from secret.secret import keys as KEYS
         keys = KEYS
